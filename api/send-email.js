@@ -21,7 +21,7 @@ export default async function handler(req, res) {
     let message = "";
     let closing = "";
 
-    if (hour === 0) {
+    if (hour === 8) {
       title = "Good Morning Bububbb";
       message = `
         <p>Alloww Good morning, <b>Ndaaa Cantik</b>.</p>
