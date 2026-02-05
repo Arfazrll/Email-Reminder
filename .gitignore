@@ -3,3 +3,11 @@
 
 # Ada Library Information
 *.ali
+
+.env
+.DS_Store
+dist
+build
+.vscode
+.idea
+node_modules   
