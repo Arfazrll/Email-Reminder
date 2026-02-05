@@ -50,79 +50,28 @@ export default async function handler(req, res) {
     }
 
     const html = `
-    <div style="
-        background:#f3f4f6;
-        padding:40px 16px;
+      <div style="
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-    ">
-        <div style="
+        background:#ffffff;
+        color:#1f2937;
         max-width:600px;
         margin:auto;
-        background:#ffffff;
-        border-radius:16px;
-        box-shadow:0 10px 25px rgba(0,0,0,0.06);
-        overflow:hidden;
-        ">
-        
-        <!-- Header -->
-        <div style="
-            padding:28px 32px;
-            border-bottom:1px solid #e5e7eb;
-        ">
-            <h1 style="
-            margin:0;
-            font-size:22px;
-            font-weight:600;
-            color:#111827;
-            ">
-            ${title}
-            </h1>
-            <p style="
-            margin-top:6px;
-            font-size:14px;
-            color:#6b7280;
-            ">
-            A gentle reminder, just for you
-            </p>
-        </div>
+        padding:24px;
+        line-height:1.7;
+      ">
+        <h2 style="font-weight:600; margin-bottom:16px;">${title}</h2>
 
-        <!-- Content -->
-        <div style="
-            padding:32px;
-            color:#1f2937;
-            line-height:1.8;
-            font-size:15px;
-        ">
-            ${message}
+        ${message}
 
-            <div style="
-            margin-top:28px;
-            padding:20px;
-            background:#f9fafb;
-            border-radius:12px;
-            border:1px solid #e5e7eb;
-            ">
-            <p style="margin:0;">
-                ${closing}
-            </p>
-            </div>
-        </div>
+        <hr style="margin:28px 0; border:none; border-top:1px solid #e5e7eb"/>
 
-        <!-- Footer -->
-        <div style="
-            padding:24px 32px;
-            border-top:1px solid #e5e7eb;
-            font-size:13px;
-            color:#6b7280;
-        ">
-            <p style="margin:0;">
-            With care,<br/>
-            <b style="color:#111827;">Azril</b>
-            </p>
-        </div>
+        <p style="margin-top:12px;">${closing}</p>
 
-        </div>
-    </div>
+        <p style="margin-top:24px; font-size:14px; color:#6b7280;">
+          With care,<br/>
+          <b>Azril</b>
+        </p>
+      </div>
     `;
 
     await transporter.sendMail({
