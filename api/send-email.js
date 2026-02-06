@@ -76,7 +76,7 @@ export default async function handler(req, res) {
 
     await transporter.sendMail({
       from: `"Azril" <${process.env.SMTP_USER}>`,
-      to: "afifah6565@gmail.com",
+      to: "indah300604@gmail.com",
       subject: "A gentle reminder to take your medicine love",
       html
     });
